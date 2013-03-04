@@ -216,10 +216,10 @@ class Question
   /**
    * Add users
    *
-   * @param \Yit\UserBundle\Entity\User $users
+   * @param \IY\UserBundle\Entity\User $users
    * @return Question
    */
-  public function addUser(\Yit\UserBundle\Entity\User $users)
+  public function addUser(\IY\UserBundle\Entity\User $users)
   {
     $this->users[] = $users;
 
@@ -229,9 +229,9 @@ class Question
   /**
    * Remove users
    *
-   * @param \Yit\UserBundle\Entity\User $users
+   * @param \IY\UserBundle\Entity\User $users
    */
-  public function removeUser(\Yit\UserBundle\Entity\User $users)
+  public function removeUser(\IY\UserBundle\Entity\User $users)
   {
     $this->users->removeElement($users);
   }

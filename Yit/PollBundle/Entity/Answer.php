@@ -161,10 +161,10 @@ class Answer
   /**
    * Set image
    *
-   * @param \Yit\MediaBundle\Entity\Media $image
+   * @param \IY\MediaBundle\Entity\Media $image
    * @return Suggestion
    */
-  public function setImage(\Yit\MediaBundle\Entity\Media $image = null)
+  public function setImage(\IY\MediaBundle\Entity\Media $image = null)
   {
     $this->image = $image;
 
@@ -174,7 +174,7 @@ class Answer
   /**
    * Get image
    *
-   * @return \Yit\MediaBundle\Entity\Media 
+   * @return \IY\MediaBundle\Entity\Media 
    */
   public function getImage()
   {

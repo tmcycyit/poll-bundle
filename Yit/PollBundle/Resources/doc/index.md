@@ -12,6 +12,12 @@ Installation guide
 Configuration guide
 ===================
 
+### This should be added in app/config.php under sonata_admin -> dashboard -> groups
+
+    poll:
+        label: Poll
+        items: [yit.poll.admin.question]
+
 ### This relation should be added to user's entity
 
     /**
@@ -61,12 +67,6 @@ Configuration guide
 ### This should be added to user's SecurityController.php loginAction()
 
     $session->set('referrer', $request->getRequestUri());
-    
-### This should be added in app/config.php under sonata_admin -> dashboard -> groups
-
-    poll:
-        label: Poll
-        items: [yit.poll.admin.question]
     
 Usage guide
 ===================
