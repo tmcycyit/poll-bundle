@@ -30,7 +30,7 @@ class Answer
    * @Gedmo\Translatable
    * @ORM\Column(name="name", type="string", length=255, nullable=true)
    */
-  private $name;
+  private $name = '';
 
   /**
    * @ORM\ManyToOne(targetEntity="Yit\PollBundle\Entity\Question", inversedBy="answers")
