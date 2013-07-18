@@ -74,7 +74,7 @@ class QuestionAdminController extends Controller
         }
         
         $this->admin->update($object);
-        $this->get('session')->setFlash('sonata_flash_success', 'flash_edit_success');
+        $this->get('session')->getFlashBag()->set('sonata_flash_success', 'flash_edit_success');
 
         if ($this->isXmlHttpRequest())
         {
@@ -91,7 +91,7 @@ class QuestionAdminController extends Controller
       // show an error message if the form failed validation
       if (!$isFormValid)
       {
-        $this->get('session')->setFlash('sonata_flash_error', 'flash_edit_error');
+        $this->get('session')->getFlashBag()->set('sonata_flash_error', 'flash_edit_error');
       }
       elseif ($this->isPreviewRequested())
       {
@@ -170,7 +170,7 @@ class QuestionAdminController extends Controller
                   ));
         }
 
-        $this->get('session')->setFlash('sonata_flash_success', 'flash_create_success');
+        $this->get('session')->getFlashBag()->set('sonata_flash_success', 'flash_create_success');
         // redirect to edit mode
         return $this->redirectTo($object);
       }
@@ -178,7 +178,7 @@ class QuestionAdminController extends Controller
       // show an error message if the form failed validation
       if (!$isFormValid)
       {
-        $this->get('session')->setFlash('sonata_flash_error', 'flash_create_error');
+        $this->get('session')->getFlashBag()->set('sonata_flash_error', 'flash_create_error');
       }
       elseif ($this->isPreviewRequested())
       {
