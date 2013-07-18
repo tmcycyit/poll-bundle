@@ -49,8 +49,9 @@ class QuestionAdmin extends Admin
     $formMapper
             ->with('Translations')
             ->add('created_at', null, array('format' => 'dd-MM-yyyy'))
-            ->add('translations', 'a2lix_translations', array(
+            ->add('translations', 'a2lix_translations_gedmo', array(
                 'by_reference' => false,
+                'translatable_class' => 'Yit\PollBundle\Entity\Question',
                 'locales' => array_keys($languages)))
             ->end()
             ->with('Answers')

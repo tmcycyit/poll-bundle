@@ -44,8 +44,9 @@ class AnswerAdmin extends Admin
               ->add('image', 'sonata_type_model_list', array('required' => false), array('link_parameters' => array('context' => 'suggestion')))
             ->end()
             ->with('Translations')
-            ->add('translations', 'a2lix_translations', array(
+            ->add('translations', 'a2lix_translations_gedmo', array(
                 'by_reference' => false,
+                'translatable_class' => 'Yit\PollBundle\Entity\Answer',
                 'locales' => array_keys($languages)))
             ->end()
     ;
