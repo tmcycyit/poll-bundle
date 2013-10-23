@@ -7,11 +7,5 @@
         "psr-0": { "Yit\\PollBundle": "" }
     },
     "target-dir": "Yit/PollBundle",
-    
-    "extra": {
-    "branch-alias": {
-        "dev-master": "1.0.0"
-     }
-    }
 }
 
