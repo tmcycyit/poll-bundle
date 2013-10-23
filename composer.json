@@ -6,6 +6,6 @@
     "autoload": {
         "psr-0": { "Yit\\PollBundle": "" }
     },
-    "target-dir": "Yit/PollBundle",
+    "target-dir": "Yit/PollBundle"
 }
 
