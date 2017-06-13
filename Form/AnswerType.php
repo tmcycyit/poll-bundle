@@ -1,6 +1,6 @@
 <?php
 
-namespace Yit\PollBundle\Form;
+namespace Tmcycyit\PollBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -19,12 +19,12 @@ class AnswerType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Yit\PollBundle\Entity\Answer'
+            'data_class' => 'Tmcycyit\PollBundle\Entity\Answer'
         ));
     }
 
     public function getName()
     {
-        return 'yit_pollbundle_answertype';
+        return 'Tmcycyit_pollbundle_answertype';
     }
 }

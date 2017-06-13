@@ -1,6 +1,6 @@
 <?php
 
-namespace Yit\PollBundle\Controller;
+namespace Tmcycyit\PollBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -8,8 +8,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
-use Yit\PollBundle\Entity\Question;
-use Yit\PollBundle\Entity\Answer;
+use Tmcycyit\PollBundle\Entity\Question;
+use Tmcycyit\PollBundle\Entity\Answer;
 
 class DefaultController extends Controller
 {
@@ -36,7 +36,7 @@ class DefaultController extends Controller
     $user = $this->get('security.context')->getToken()->getUser();
 
     $em = $this->getDoctrine()->getEntityManager();
-    $anser = $em->getRepository('YitPollBundle:Answer')->findOneById($id);
+    $anser = $em->getRepository('TmcycyitPollBundle:Answer')->findOneById($id);
     $question = $anser->getQuestion();
 
     if ($user->getVotes()->contains($question))

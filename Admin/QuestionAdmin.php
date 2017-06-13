@@ -1,6 +1,6 @@
 <?php
 
-namespace Yit\PollBundle\Admin;
+namespace Tmcycyit\PollBundle\Admin;
 
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Form\FormMapper;
@@ -8,7 +8,7 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 
-use Yit\PollBundle\Form\AnswerType;
+use Tmcycyit\PollBundle\Form\AnswerType;
 
 /**
  * Description of QuestionAdmin
@@ -51,7 +51,7 @@ class QuestionAdmin extends Admin
             ->add('created_at', null, array('format' => 'dd-MM-yyyy'))
             ->add('translations', 'a2lix_translations_gedmo', array(
                 'by_reference' => false,
-                'translatable_class' => 'Yit\PollBundle\Entity\Question',
+                'translatable_class' => 'Tmcycyit\PollBundle\Entity\Question',
                 'locales' => array_keys($languages)))
             ->end()
             ->with('Answers')

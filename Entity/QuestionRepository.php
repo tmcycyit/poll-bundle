@@ -1,6 +1,6 @@
 <?php
 
-namespace Yit\PollBundle\Entity;
+namespace Tmcycyit\PollBundle\Entity;
 
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Query;
@@ -20,7 +20,7 @@ class QuestionRepository extends EntityRepository
   public function findOneByStatus()
   {
     $query = $this->getEntityManager()
-                    ->createQuery("SELECT q FROM YitPollBundle:Question q
+                    ->createQuery("SELECT q FROM TmcycyitPollBundle:Question q
                            WHERE q.status = 1");
     
     $query->setHint(Query::HINT_CUSTOM_OUTPUT_WALKER, 'Gedmo\\Translatable\\Query\\TreeWalker\\TranslationWalker');
@@ -35,7 +35,7 @@ class QuestionRepository extends EntityRepository
   public function findAllByStatus($id)
   {
     $query = $this->getEntityManager()
-                    ->createQuery("SELECT q FROM YitPollBundle:Question q
+                    ->createQuery("SELECT q FROM TmcycyitPollBundle:Question q
                            WHERE q.status = 1 and q.id != ". $id );
     
     $query->setHint(Query::HINT_CUSTOM_OUTPUT_WALKER, 'Gedmo\\Translatable\\Query\\TreeWalker\\TranslationWalker');

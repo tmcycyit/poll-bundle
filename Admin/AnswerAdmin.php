@@ -1,6 +1,6 @@
 <?php
 
-namespace Yit\PollBundle\Admin;
+namespace Tmcycyit\PollBundle\Admin;
 
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Form\FormMapper;
@@ -46,7 +46,7 @@ class AnswerAdmin extends Admin
             ->with('Translations')
             ->add('translations', 'a2lix_translations_gedmo', array(
                 'by_reference' => false,
-                'translatable_class' => 'Yit\PollBundle\Entity\Answer',
+                'translatable_class' => 'Tmcycyit\PollBundle\Entity\Answer',
                 'locales' => array_keys($languages)))
             ->end()
     ;

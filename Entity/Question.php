@@ -1,6 +1,6 @@
 <?php
 
-namespace Yit\PollBundle\Entity;
+namespace Tmcycyit\PollBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -9,8 +9,8 @@ use Gedmo\Mapping\Annotation as Gedmo;
  * Question
  *
  * @ORM\Table(name="poll_question")
- * @ORM\Entity(repositoryClass="Yit\PollBundle\Entity\QuestionRepository")
- * @Gedmo\TranslationEntity(class="Yit\PollBundle\Entity\QuestionTranslation")
+ * @ORM\Entity(repositoryClass="Tmcycyit\PollBundle\Entity\QuestionRepository")
+ * @Gedmo\TranslationEntity(class="Tmcycyit\PollBundle\Entity\QuestionTranslation")
  */
 class Question
 {
@@ -38,7 +38,7 @@ class Question
   protected $translations;
 
   /**
-   * @ORM\OneToMany(targetEntity="Yit\PollBundle\Entity\Answer", mappedBy="question", cascade={ "persist", "remove"}, orphanRemoval=true)
+   * @ORM\OneToMany(targetEntity="Tmcycyit\PollBundle\Entity\Answer", mappedBy="question", cascade={ "persist", "remove"}, orphanRemoval=true)
    */
   protected $answers;
 
@@ -137,10 +137,10 @@ class Question
   /**
    * Add answers
    *
-   * @param \Yit\PollBundle\Entity\Answer $answers
+   * @param \Tmcycyit\PollBundle\Entity\Answer $answers
    * @return Question
    */
-  public function addAnswer(\Yit\PollBundle\Entity\Answer $answers)
+  public function addAnswer(\Tmcycyit\PollBundle\Entity\Answer $answers)
   {
     $this->answers[] = $answers;
 
@@ -150,9 +150,9 @@ class Question
   /**
    * Remove answers
    *
-   * @param \Yit\PollBundle\Entity\Answer $answers
+   * @param \Tmcycyit\PollBundle\Entity\Answer $answers
    */
-  public function removeAnswer(\Yit\PollBundle\Entity\Answer $answers)
+  public function removeAnswer(\Tmcycyit\PollBundle\Entity\Answer $answers)
   {
     $this->answers->removeElement($answers);
   }
@@ -263,9 +263,9 @@ class Question
   /**
    * Remove translations
    *
-   * @param Yit\PollBundle\Entity\QuestionTranslation $translations
+   * @param Tmcycyit\PollBundle\Entity\QuestionTranslation $translations
    */
-  public function removeTranslation(\Yit\PollBundle\Entity\QuestionTranslation $translations)
+  public function removeTranslation(\Tmcycyit\PollBundle\Entity\QuestionTranslation $translations)
   {
     $this->translations->removeElement($translations);
   }

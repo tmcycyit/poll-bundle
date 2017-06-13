@@ -1,6 +1,6 @@
 <?php
 
-namespace Yit\PollBundle\Entity;
+namespace Tmcycyit\PollBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -10,7 +10,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
  *
  * @ORM\Table()
  * @ORM\Entity
- * @Gedmo\TranslationEntity(class="Yit\PollBundle\Entity\AnswerTranslation")
+ * @Gedmo\TranslationEntity(class="Tmcycyit\PollBundle\Entity\AnswerTranslation")
  */
 class Answer
 {
@@ -33,7 +33,7 @@ class Answer
   private $name = '';
 
   /**
-   * @ORM\ManyToOne(targetEntity="Yit\PollBundle\Entity\Question", inversedBy="answers")
+   * @ORM\ManyToOne(targetEntity="Tmcycyit\PollBundle\Entity\Question", inversedBy="answers")
    * @ORM\JoinColumn(name="question_id", referencedColumnName="id")
    */
   protected $question;
@@ -115,10 +115,10 @@ class Answer
   /**
    * Set question
    *
-   * @param \Yit\PollBundle\Entity\Question $question
+   * @param \Tmcycyit\PollBundle\Entity\Question $question
    * @return Answer
    */
-  public function setQuestion(\Yit\PollBundle\Entity\Question $question = null)
+  public function setQuestion(\Tmcycyit\PollBundle\Entity\Question $question = null)
   {
     $this->question = $question;
 
@@ -128,7 +128,7 @@ class Answer
   /**
    * Get question
    *
-   * @return \Yit\PollBundle\Entity\Question 
+   * @return \Tmcycyit\PollBundle\Entity\Question 
    */
   public function getQuestion()
   {
@@ -198,9 +198,9 @@ class Answer
   /**
    * Remove translations
    *
-   * @param Yit\PollBundle\Entity\AnswerTranslation $translations
+   * @param Tmcycyit\PollBundle\Entity\AnswerTranslation $translations
    */
-  public function removeTranslation(\Yit\PollBundle\Entity\AnswerTranslation $translations)
+  public function removeTranslation(\Tmcycyit\PollBundle\Entity\AnswerTranslation $translations)
   {
     $this->translations->removeElement($translations);
   }

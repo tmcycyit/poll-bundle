@@ -1,6 +1,6 @@
 <?php
 
-namespace Yit\PollBundle\Entity;
+namespace Tmcycyit\PollBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Translatable\Entity\MappedSuperclass\AbstractPersonalTranslation;
@@ -148,7 +148,7 @@ class AnswerTranslation extends AbstractPersonalTranslation
     /**
      * Set object
      *
-     * @param Yit\PollBundle\Entity\Question $object
+     * @param Tmcycyit\PollBundle\Entity\Question $object
      * @return SuggestionTranslation
      */
     public function setObject( $object = null)
@@ -161,7 +161,7 @@ class AnswerTranslation extends AbstractPersonalTranslation
     /**
      * Get object
      *
-     * @return Yit\PollBundle\Entity\Question
+     * @return Tmcycyit\PollBundle\Entity\Question
      */
     public function getObject()
     {

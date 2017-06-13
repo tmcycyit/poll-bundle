@@ -1,10 +1,10 @@
 <?php
 
-namespace Yit\PollBundle\Controller;
+namespace Tmcycyit\PollBundle\Controller;
 
 use Sonata\AdminBundle\Controller\CRUDController as Controller;
-use Yit\PollBundle\Entity\Question;
-use Yit\PollBundle\Entity\Answer;
+use Tmcycyit\PollBundle\Entity\Question;
+use Tmcycyit\PollBundle\Entity\Answer;
 
 /**
  * Description of QuestionAdminController
@@ -62,7 +62,7 @@ class QuestionAdminController extends Controller
         {
           $id = $object->getId();
           $em = $this->getDoctrine()->getEntityManager();
-          $enabled = $em->getRepository('YitPollBundle:Question')->findAllByStatus($id);
+          $enabled = $em->getRepository('TmcycyitPollBundle:Question')->findAllByStatus($id);
           
           foreach ($enabled as $an_enabled)
           {
@@ -148,7 +148,7 @@ class QuestionAdminController extends Controller
         if ($object->getStatus() == '1')
         {
           $em = $this->getDoctrine()->getEntityManager();
-          $enabled = $em->getRepository('YitPollBundle:Question')->findAllByStatus('1');
+          $enabled = $em->getRepository('TmcycyitPollBundle:Question')->findAllByStatus('1');
           
           foreach ($enabled as $an_enabled)
           {
