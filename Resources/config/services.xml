@@ -6,18 +6,18 @@
 
     <services>
       
-        <service id="yit.poll.admin.answer" class="Yit\PollBundle\Admin\AnswerAdmin">
+        <service id="yit.poll.admin.answer" class="Tmcycyit\PollBundle\Admin\AnswerAdmin">
             <tag name="sonata.admin" manager_type="orm" group="Poll" label="Answer" />
             <argument/>
-            <argument>Yit\PollBundle\Entity\Answer</argument>
+            <argument>Tmcycyit\PollBundle\Entity\Answer</argument>
             <argument>NULL</argument>
         </service>
         
-        <service id="yit.poll.admin.question" class="Yit\PollBundle\Admin\QuestionAdmin">
+        <service id="yit.poll.admin.question" class="Tmcycyit\PollBundle\Admin\QuestionAdmin">
             <tag name="sonata.admin" manager_type="orm" group="Poll" label="Question" />
             <argument/>
-            <argument>Yit\PollBundle\Entity\Question</argument>
-            <argument>YitPollBundle:QuestionAdmin</argument>
+            <argument>Tmcycyit\PollBundle\Entity\Question</argument>
+            <argument>TmcycyitPollBundle:QuestionAdmin</argument>
         </service>
         
     </services>
